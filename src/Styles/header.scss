@@ -6,20 +6,24 @@
     justify-content: space-between;
     height: 10vh;
     font-family: variable.$normal_textfont;
-    .logo_background{
+
+    &_logo_background{
         display: flex;
         align-items: center;
-        .logo{
+
+        &_logo{
             width: 55px;
             height: 45px;
             margin-left: 20px;
             cursor: pointer;
         }
+
     }
     .nav{
         display: flex;
         align-items: center;
         margin: 0 120px 0 0;
+
         a{
             margin: 0 10px 0 10px;
             text-decoration: none;
@@ -35,7 +39,8 @@
                 font-weight: bold;
             }
         }
-        .nav_btn{
+
+        &_btn{
             margin-left: 20px;
             @include variable.white_btn(8px,12px,0.7em,white,black,black);
             &:hover{
@@ -44,6 +49,7 @@
                 outline: 1px solid white;
             }
         }
+        
     }
 }
 

@@ -10,11 +10,11 @@
     align-items: center;
     justify-content: flex-end;
 
-    .home_heading {
+    &_heading {
         color: white;
         margin: 5% 5% 0 0;
 
-        .home_heading1 {
+        &_firstLine {
             font-family: variable.$home_titlefont;
             text-align: right;
             text-transform: uppercase;
@@ -23,7 +23,7 @@
             line-height: 90px;
         }
 
-        .home_heading2 {
+        &_secondLine {
             font-family: variable.$normal_textfont;
             text-align: right;
             font-weight: bold;
@@ -31,11 +31,12 @@
             font-size: 200%;
         }
 
-        .home_btn {
+        &_btn {
             text-align: right;
 
             button {
                 margin-top: 30px;
+                font-family: variable.$page_titlefont;
                 @include variable.white_btn(10px,40px,0.7em,variable.$background,white,variable.$background);
                 &:hover {
                     background:white;
@@ -48,18 +49,18 @@
 }
 @include variable.for_phone_only{
     .home{
-        .home_heading{
-            .home_heading1{
+        &_heading{
+            &_firstLine{
                 text-align: center;
                 font-size: 400%;
                 letter-spacing: 3px;
                 line-height: 70px;
             }
-            .home_heading2 {
+            &_secondLine {
                 text-align: center;
                 font-size: 100%;
             }
-            .home_btn {
+            &_btn {
                 text-align: center;
 
             }

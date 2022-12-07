@@ -7,32 +7,36 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
     .about{
         height: 70vh;
         width: 80vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        .about_details{
+
+        &_details{
             width: 40vw;
-            .about_title{
+            &_title{
                 font-family: variable.$page_titlefont;
                 font-size: 4.3rem;
                 font-weight: bold;
             }
-            .about_discription{
+            &_discription{
                 font-size: 1.16rem;
                 line-height: 27px;
                 margin: 4% 0 0 0 ;
                 color: rgb(108, 108, 108);
             }
-            .about_list_1{
+
+            &_list_1{
                 margin-top: 5%;
-                .about_list_1_heading{
+                .about_details_list_1_heading{
                     font-size: 1.3rem;
                     font-family: variable.$page_titlefont;
                 }
-                .ul{
+
+                &_ul{
                     font-size: 1.1rem;
                     line-height: 35px;
                     color: rgb(108, 108, 108);
@@ -47,14 +51,16 @@
         .about_img{
             width: 37vw;
             position: relative;
-            .about_play{
+
+            &_play{
                 position: absolute;
                 height: 100%;
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .about_play_btn{
+
+                &_btn{
                     display: flex;
                     justify-content: center;
                     align-items: center;

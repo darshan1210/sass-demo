@@ -13,14 +13,15 @@
     align-items: center;
     justify-content: space-around;
     position: relative;
-    .Progress_dark{
+
+    &_dark {
         position: absolute;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.594);
     }
 
-    .ProgressCard {
+    &_Card {
         z-index: 1;
         width: 20vw;
         height: 30vh;
@@ -30,26 +31,28 @@
         justify-content: center;
         color: white;
 
-        .ProgressCardNumber {
+        &_Number {
             font-size: 3rem;
         }
 
-        .ProgressCardDiscription {
+        &_Discription {
             text-align: center;
             margin-top: 5%;
         }
     }
 }
 
-@include variable.for_phone_only{ 
+@include variable.for_phone_only {
     .Progress {
         width: 100vw;
         height: auto;
-        .ProgressCard {
+
+        &_Card {
             width: 20vw;
             height: 30vh;
             text-align: center;
-            .ProgressCardNumber { 
+
+            &_Number {
                 font-size: 2rem;
                 margin-bottom: 5%;
             }

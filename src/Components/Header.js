@@ -5,8 +5,8 @@ import '../Styles/header.scss'
 function Header () {
   return (
         <div className='header'>
-            <div className='logo_background'>
-            <img className='logo' src={Logo} alt="" />
+            <div className='header_logo_background'>
+            <img className='header_logo_background_logo' src={Logo} alt="" />
             </div>
             <div className='nav'>
                 <a href="#">Home</a>

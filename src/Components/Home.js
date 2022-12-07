@@ -6,9 +6,9 @@ function Home () {
         <>
             <div className='home'>
                 <div className='home_heading'>
-                <div className='home_heading1'>Agency.</div>
-                <div className='home_heading2'> There are many variations of passages but the majority <br/> have suffered alteration.</div>
-               <div className='home_btn'>
+                <div className='home_heading_firstLine'>Agency.</div>
+                <div className='home_heading_secondLine'> There are many variations of passages but the majority <br/> have suffered alteration.</div>
+               <div className='home_heading_btn'>
                <button >Contact Us</button>
                </div>
                 </div>

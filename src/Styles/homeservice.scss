@@ -1,4 +1,5 @@
-@use './variable'; 
+@use './variable';
+
 .homeservices {
     height: 45vh;
     display: flex;
@@ -16,24 +17,24 @@
     border-radius: 20px;
 
 
-    &:hover{
-        box-shadow: 0px 15px 50px -14px rgba(0,0,0,0.75);
+    &:hover {
+        box-shadow: 0px 15px 50px -14px rgba(0, 0, 0, 0.75);
     }
 
-    .HomeCardIcon {
+    &_Icon {
         font-size: 4rem;
         margin-top: 10%;
         color: variable.$background;
     }
 
-    .HomeCardTitle {
+    &_Title {
         font-weight: bold;
         margin: 0 5% 3% 5%;
         font-size: 1.5rem;
         text-align: center;
     }
 
-    .HomeCardDiscription {
+    &_Discription {
         text-align: center;
         width: 80%;
         font-size: 1.3rem;
@@ -43,7 +44,7 @@
 
 }
 
-@include variable.for_phone_only{
+@include variable.for_phone_only {
     .homeservices {
         height: auto;
         display: flex;
@@ -52,9 +53,11 @@
         align-items: center;
         padding: 3% 0 3% 0;
     }
+
     .HomeCard {
         width: auto;
-        .HomeCardIcon {
+
+        &_Icon {
             font-size: 4rem;
             margin-top: 10%;
             color: variable.$background;

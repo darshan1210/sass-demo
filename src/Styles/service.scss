@@ -15,23 +15,23 @@
         justify-content: space-between;
         margin: 0 5% 0 5%;
 
-        .service_details {
+        &_details {
             width: 20vw;
 
-            .service_title {
+            &_title {
                 font-family: variable.$page_titlefont;
                 font-size: 420%;
             }
 
-            .service_discription {
+            &_discription {
                 margin-top: 5%;
                 font-family: variable.$normal_textfont;
             }
 
-            .custom_service_btn {
+            &_btn {
                 margin-top: 10%;
 
-                .custom_service_btn_line {
+                &_line {
                     margin-top: 2%;
                     background-color: variable.$background;
                     height: 2px;
@@ -41,13 +41,13 @@
             }
         }
 
-        .service_template {
+        &_template {
             display: flex;
             width: 65vw;
             flex-direction: row;
             justify-content: space-between;
 
-            .service_card {
+            &_card {
                 width: 17vw;
                 height: 50vh;
                 display: flex;
@@ -59,21 +59,21 @@
                     border-radius: 5px;
                 }
 
-                .service_card_title {
+                &_title {
                     margin-top: 5%;
                     font-weight: bold;
                     font-size: 1.4em;
                 }
 
-                .service_card_discription {
+                &_discription {
                     font-family: variable.$normal_textfont;
                     margin-top: 5%;
                 }
 
-                .read_more_btn {
+                &_btn {
                     margin-top: 5%;
 
-                    .read_more_btn_line {
+                    &_line {
                         margin-top: 2%;
                         background-color: variable.$background;
                         height: 2px;
@@ -88,32 +88,36 @@
     }
 }
 
-@include variable.for_phone_only{
-.service_back {
-    width: 100vw;
-    height: auto;
-    .service {
-        width: 80vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0 5% 0 5%;
-        .service_details{
-            width: auto;
-            margin: 2% 0 5% 0;
-        }
-        .service_template {
-            width: 60vw;
+@include variable.for_phone_only {
+    .service_back {
+        width: 100vw;
+        height: auto;
+
+        .service {
+            width: 80vw;
             display: flex;
             flex-direction: column;
-            .service_card {
+            justify-content: space-between;
+            margin: 0 5% 0 5%;
+
+            &_details {
                 width: auto;
-                height: auto;
+                margin: 2% 0 5% 0;
+            }
+
+            &_template {
+                width: 60vw;
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 5%;
+
+                &_card {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 5%;
+                }
             }
         }
     }
-}
 }

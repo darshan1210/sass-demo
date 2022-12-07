@@ -8,37 +8,35 @@ function About () {
             <div className='about_back'>
                 <div className='about'>
                     <div className='about_details'>
-                        <div className='about_title'>
+                        <div className='about_details_title'>
                             About
                         </div>
-                        <div className='about_discription'>
+                        <div className='about_details_discription'>
                             There are many variations of passages of Lorem Ipsum available.but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.
                         </div>
-                        <div className='about_list_1'>
-                            <div className='about_list_1_heading'>
+                        <div className='about_details_list_1'>
+                            <div className='about_details_list_1_heading'>
                                 Lorem ipsum dolor sit.
                             </div>
-                            <div className='ul'>The Philosophy Of business analytics.</div>
-                            <div className='ul'> Fast-Track Your business </div>
-                            <div className='ul'> Lies And Damn Lies About business </div>
-                            <div className='ul'> The Ultimate Deal On business </div>
-
+                            <div className='about_details_list_1_ul'>The Philosophy Of business analytics.</div>
+                            <div className='about_details_list_1_ul'> Fast-Track Your business </div>
+                            <div className='about_details_list_1_ul'> Lies And Damn Lies About business </div>
+                            <div className='about_details_list_1_ul'> The Ultimate Deal On business </div>
                         </div>
 
-                        <div className='about_list_1'>
-                            <div className='about_list_1_heading'>
+                        <div className='about_details_list_1'>
+                            <div className='about_details_list_1_heading'>
                                 Lorem ipsum dolor sit.
                             </div>
-                            <div className='ul'>The Philosophy Of business analytics.</div>
-                            <div className='ul'> Fast-Track Your business </div>
-                            <div className='ul'> Lies And Damn Lies About business </div>
-                            <div className='ul'> The Ultimate Deal On business </div>
-
+                            <div className='about_details_list_1_ul'>The Philosophy Of business analytics.</div>
+                            <div className='about_details_list_1_ul'> Fast-Track Your business </div>
+                            <div className='about_details_list_1_ul'> Lies And Damn Lies About business </div>
+                            <div className='about_details_list_1_ul'> The Ultimate Deal On business </div>
                         </div>
                     </div>
                     <div className='about_img'>
-                        <div className='about_play'>
-                            <div className='about_play_btn'>
+                        <div className='about_img_play'>
+                            <div className='about_img_play_btn'>
                                 <FaPlay/>
                             </div>
                         </div>

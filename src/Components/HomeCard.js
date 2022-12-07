@@ -6,16 +6,15 @@ function HomeCard ({ icon, HomeCardTitle, HomeCardDiscription }) {
   return (
         <>
             <div className='HomeCard'>
-                <div className='HomeCardIcon'>
-                    <div className='temp2'>
-                    {icon}
-                    </div>
-                    </div>
-                <div className='HomeCardTitle'>
+
+                <div className='HomeCard_Icon'>
+                        {icon}
+                </div>
+                <div className='HomeCard_Title'>
                     {HomeCardTitle}
                 </div>
-                <div className='HomeCardDiscription'>
-                   {HomeCardDiscription}
+                <div className='HomeCard_Discription'>
+                    {HomeCardDiscription}
                 </div>
             </div>
         </>
