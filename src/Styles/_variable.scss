@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+$background:#f01454;
+$home_titlefont:'Encode Sans', sans-serif;
+$page_titlefont:'Alexandria', sans-serif;
+$normal_textfont:'Poppins', sans-serif;
+
+@mixin white_btn($Ptop_down,$Pleft_right,$fontsize,$backgroundcolor,$textcolor,$bordercolor){
+    text-transform: uppercase;
+    padding: $Ptop_down $Pleft_right $Ptop_down $Pleft_right;
+    font-size: $fontsize;
+    background: $backgroundcolor;
+    color: $textcolor;
+    border: none;
+    outline: 1px solid $bordercolor;
+    border-radius: 3px;
+    cursor: pointer;
+};
+
+@mixin for_phone_only {
+    @media screen and (max-width:599px) {
+        @content
+    }
+};
+
+@mixin for_tab_only {
+    @media screen and (max-width:800px) {
+        @content
+    }
+}

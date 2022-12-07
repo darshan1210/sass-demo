@@ -1,0 +1,68 @@
+@use './variable';
+.home {
+    background-image: url(https://images.unsplash.com/photo-1617136505992-a93c80ac5852?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .home_heading {
+        color: white;
+        margin: 5% 5% 0 0;
+
+        .home_heading1 {
+            font-family: variable.$home_titlefont;
+            text-align: right;
+            text-transform: uppercase;
+            font-size: 600%;
+            letter-spacing: 5px;
+            line-height: 90px;
+        }
+
+        .home_heading2 {
+            font-family: variable.$normal_textfont;
+            text-align: right;
+            font-weight: bold;
+            color: lightgray;
+            font-size: 200%;
+        }
+
+        .home_btn {
+            text-align: right;
+
+            button {
+                margin-top: 30px;
+                @include variable.white_btn(10px,40px,0.7em,variable.$background,white,variable.$background);
+                &:hover {
+                    background:white;
+                    color:variable.$background;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+@include variable.for_phone_only{
+    .home{
+        .home_heading{
+            .home_heading1{
+                text-align: center;
+                font-size: 400%;
+                letter-spacing: 3px;
+                line-height: 70px;
+            }
+            .home_heading2 {
+                text-align: center;
+                font-size: 100%;
+            }
+            .home_btn {
+                text-align: center;
+
+            }
+        }
+    }
+}

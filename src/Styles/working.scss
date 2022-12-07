@@ -1,0 +1,121 @@
+@use './variable';
+
+.Working_process_back{
+    width: 100vw;
+    height: 95vh;
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .Working_process{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 80vw;
+        .Working_process_img{
+            height: 80vh;
+            width: 30vw;
+            img{
+                height:100%;
+                width: 100%;
+            }
+        }
+        .Working_process_details{
+            height: 73vh;
+            width: 30vw;
+            margin-right: 10vw;
+            .Working_process_title{
+                font-family: variable.$page_titlefont;
+                font-size: 3.5rem;
+            }
+            .Working_process_discription1{
+                font-family: variable.$normal_textfont;
+                margin-top: 4%;
+            }
+            .Working_process_discription2{
+                margin-top: 6.5%;
+                .Working_process_discription2_line{
+                    margin-top: 1%;
+                    height: 2px;
+                    width: 65%;
+                    background-color: variable.$background;
+                }
+            }
+            .Working_process_discription3{
+                font-family: variable.$normal_textfont;
+                margin-top: 3%;
+            }
+            .Working_process_discription4{
+                margin-top: 6%;
+                font-family: variable.$page_titlefont;
+               
+            }
+            .Working_process_discription4_line{
+                margin-top: 1%;
+                height: 2px;
+                width: 15%;
+                background-color: rgb(201, 201, 201);
+            }
+            .Working_process_discription5{
+                margin-top: 5%;
+                font-family: variable.$page_titlefont;
+            }
+            .Working_process_discription6{
+                margin-top: 5%;
+                font-family: variable.$page_titlefont;
+            }
+            .Working_process_btn{
+                margin-top: 6%;
+                font-family: variable.$page_titlefont;
+                @include variable.white_btn(10px,40px,0.9em,variable.$background,white,variable.$background);
+                &:hover{
+                    background-color: white;
+                    color: variable.$background;
+                }
+            }
+        }
+    }
+}
+
+
+@include variable.for_phone_only{
+    .Working_process_back{
+        height: auto;
+        .Working_process{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: auto;
+            margin: 5% 0 5% 0;
+
+            .Working_process_img{
+                height: 40vh;
+                width: auto;
+            }
+            .Working_process_details{
+                height: auto;
+                width: auto;
+                margin-left: 30px;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               text-align: center;
+               .Working_process_discription2{
+                .Working_process_discription2_line{
+                    margin-top: 1%;
+                    height: 3px;
+                    width: 100%;
+                }
+            }
+            .Working_process_discription4_line{
+                margin-top: 1%;
+                height: 3px;
+                width: 100%;
+            }
+            }
+        }
+    }
+}

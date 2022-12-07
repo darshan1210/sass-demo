@@ -1,0 +1,95 @@
+@use './variable';
+
+.about_back{
+    width: 100vw;
+    height: 95vh;
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .about{
+        height: 70vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .about_details{
+            width: 40vw;
+            .about_title{
+                font-family: variable.$page_titlefont;
+                font-size: 4.3rem;
+                font-weight: bold;
+            }
+            .about_discription{
+                font-size: 1.16rem;
+                line-height: 27px;
+                margin: 4% 0 0 0 ;
+                color: rgb(108, 108, 108);
+            }
+            .about_list_1{
+                margin-top: 5%;
+                .about_list_1_heading{
+                    font-size: 1.3rem;
+                    font-family: variable.$page_titlefont;
+                }
+                .ul{
+                    font-size: 1.1rem;
+                    line-height: 35px;
+                    color: rgb(108, 108, 108);
+                    &:before {
+                        content: '✓';
+                        color: variable.$background;
+                        margin-right: 5px;
+                      }
+                }
+            }
+        }
+        .about_img{
+            width: 37vw;
+            position: relative;
+            .about_play{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .about_play_btn{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:90px;
+                    width:90px;
+                    background-color: variable.$background;
+                    border-radius: 50%;
+                    color: white;
+                    cursor: pointer;
+                    font-size: 1.1rem;
+                }
+            }
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include variable.for_phone_only{ 
+    .about_back{
+        width: 100vw;
+        height: 95vh;
+        background-color: rgb(234, 234, 234);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .about{
+            height: 70vh;
+            width: 80vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+    }
+}

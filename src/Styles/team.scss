@@ -1,0 +1,85 @@
+@use './variable';
+
+.managing_team{
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .managing_team_heading{
+        text-align: center;
+        margin-bottom: 7%;
+        .managing_team_title{
+            font-family: variable.$page_titlefont;
+            font-weight: bold;
+            font-size: 3.5rem;
+            margin-bottom: 3%;
+        }
+        .managing_team_discription{
+            font-family: variable.$normal_textfont;
+            font-weight: 570;
+        }
+    }
+
+    .managing_team_template{
+        display: flex;
+        flex-direction:row;
+        justify-content:space-around;
+        width: 80vw;
+        .managing_team_card{
+            width: 15vw;
+            height:60vh;
+            .managing_team_card_img{
+                width: 100%;
+                height: 70%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                }
+            }
+            .managing_team_card_name{
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin:4% 0 ;
+            }
+            .managing_team_card_domain{
+                font-family: variable.$normal_textfont;
+                margin-bottom: 4%;
+                font-size: 1.2rem;
+
+            }
+            .managing_team_card_icons{
+                
+                span{
+                    margin: 0 5% 0 0;
+                }
+            }
+        }
+    }
+}
+
+@include variable.for_phone_only{
+        .managing_team{
+            height: auto;
+            .managing_team_heading{
+                .managing_team_title{
+                    font-size: 3rem;
+                    margin-top: 5%;
+                }
+            }
+
+            .managing_team_template{
+                display: flex;
+                flex-direction:column;
+                align-items: center;
+                justify-content:space-around;
+                width: 80vw;
+                .managing_team_card{
+                    width: 50vw;
+                    height:40vh;
+                }
+            }
+        }
+}

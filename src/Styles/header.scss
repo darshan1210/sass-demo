@@ -1,0 +1,58 @@
+@use './variable';
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+    font-family: variable.$normal_textfont;
+    .logo_background{
+        display: flex;
+        align-items: center;
+        .logo{
+            width: 55px;
+            height: 45px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        margin: 0 120px 0 0;
+        a{
+            margin: 0 10px 0 10px;
+            text-decoration: none;
+            color: black;
+            border: 2px solid white;
+            padding: 5px 10px 5px 10px;
+            &:hover{
+                border-top: 2px solid white;
+                border-right: 2px solid white;
+                border-left: 2px solid white;
+                border-bottom: 2px solid #f01454;
+                border-radius: 3.3px;
+                font-weight: bold;
+            }
+        }
+        .nav_btn{
+            margin-left: 20px;
+            @include variable.white_btn(8px,12px,0.7em,white,black,black);
+            &:hover{
+                background: variable.$background;
+                color: white;
+                outline: 1px solid white;
+            }
+        }
+    }
+}
+
+@include variable.for_phone_only{
+    .header{
+        .nav{
+            a{
+                display: none;
+            }
+        }
+    }
+}
