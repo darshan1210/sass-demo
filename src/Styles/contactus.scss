@@ -1,0 +1,44 @@
+@use './variable';
+
+
+.contactUs{
+    height: 40vh;
+    width: 100%;
+    background-color: variable.$background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &_heading1{
+        color: white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-bottom: 1%;
+    }
+    &_heading2{
+        color: white;
+        font-weight: bold;
+        font-family: variable.$page_titlefont;
+        font-size: 4.5rem;
+    }
+    &_btn{
+        margin-top: 3%;
+        button{
+            @include variable.white_btn(10px,40px,0.7em,variable.$background,white,white);
+            &:hover{
+                background-color: white;
+                color: variable.$background;
+            }
+        }
+    }
+}
+
+
+@include variable.for_phone_only{ 
+    .contactUs{
+
+        &_heading2{
+            font-size: 3rem;
+        }
+    }
+}

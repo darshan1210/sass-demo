@@ -1,17 +1,18 @@
 @use './variable';
 
-.header{
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 10vh;
+    width:100%;
     font-family: variable.$normal_textfont;
 
-    &_logo_background{
+    &_logo_background {
         display: flex;
         align-items: center;
 
-        &_logo{
+        &_logo {
             width: 55px;
             height: 45px;
             margin-left: 20px;
@@ -19,18 +20,20 @@
         }
 
     }
-    .nav{
+
+    .nav {
         display: flex;
         align-items: center;
         margin: 0 120px 0 0;
 
-        a{
+        a {
             margin: 0 10px 0 10px;
             text-decoration: none;
             color: black;
             border: 2px solid white;
             padding: 5px 10px 5px 10px;
-            &:hover{
+
+            &:hover {
                 border-top: 2px solid white;
                 border-right: 2px solid white;
                 border-left: 2px solid white;
@@ -40,24 +43,98 @@
             }
         }
 
-        &_btn{
+        &_btn {
             margin-left: 20px;
-            @include variable.white_btn(8px,12px,0.7em,white,black,black);
-            &:hover{
+            @include variable.white_btn(8px, 12px, 0.7em, white, black, black);
+
+            &:hover {
                 background: variable.$background;
                 color: white;
                 outline: 1px solid white;
             }
         }
-        
+
     }
+
+    .menu_nav {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
 }
 
-@include variable.for_phone_only{
-    .header{
-        .nav{
-            a{
-                display: none;
+@include variable.for_phone_only {
+    .header {
+        .nav {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            margin-right: 10%;
+            cursor: pointer;
+            color: black;
+        }
+
+        .menu_nav {
+            display: block;
+            background-color: white;
+            height: auto;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            &_close{
+                position: absolute;
+                right: 0;
+                font-size: 2rem;
+                margin: 10px 20px 0 0;
+                cursor: pointer;
+            }
+
+            img {
+                margin: 10px 0 5px 20px;
+                height: 70px;
+                width: 70px;
+            }
+
+            &_link {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-family: variable.$page_titlefont;
+                    margin-bottom: 10px;
+                    border: 2px solid white;
+                    &:hover {
+                        border-top: 2px solid white;
+                        border-right: 2px solid white;
+                        border-left: 2px solid white;
+                        border-bottom: 2px solid #f01454;
+                        border-radius: 3.3px;
+                        font-weight: bold;
+                    }
+                }
+
+                .btn {
+                    margin-bottom: 5%;
+                    @include variable.white_btn(8px, 12px, 0.7em, white, black, black);
+
+                    &:hover {
+                        background-color: variable.$background;
+                        color: white;
+                        outline: 1px solid variable.$background;
+                    }
+                }
+
             }
         }
     }

@@ -1,0 +1,140 @@
+@use './variable';
+
+.plan{
+    width: 100%;
+    height: 100vh;
+    // background-color: rgb(234, 234, 234);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &_Details{
+        text-align: center;
+        margin-bottom: 7%;
+        &_heading {
+            font-family: variable.$page_titlefont;
+            font-size: 3.5rem;
+        }
+
+        &_discription {
+            font-size: 1.1rem;
+        }
+    }
+
+    &_template{
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &_card{
+            border: 2px solid variable.$background;
+            border-radius: 5px;
+            width: 20vw;
+            padding: 10px;
+
+            &:hover{
+                background-color: variable.$background;
+                color: white;
+                .plan_template_card_break_line{
+                    color: rgb(165, 165, 165);
+                }
+
+                .plan_template_card_money{
+                    color: white;
+                }
+
+                .plan_template_card_perMonth{
+                    color: white;
+                }
+
+                .plan_template_card_features_ul{
+                    &:before {
+                        color: white;
+                    }
+                }
+               
+            }
+
+            &_type{
+                margin: 7% 0 6% 0;
+                font-size: 1.1rem;
+                text-align: center;
+                font-weight: bold;
+            }
+            &_money{
+                color: variable.$background;
+                text-align: center;
+                font-size: 5rem;
+            }
+            &_perMonth{
+                font-size: .9em ;
+                margin-bottom: 8%;
+                text-align: center;
+                color: variable.$background;
+            }
+            &_break{
+                margin-bottom: 8%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &_line{
+                    background-color: lightgray;
+                    height: 1px;
+                    width: 18vw;
+                }
+            }
+            &_features{
+                margin-bottom: 13%;
+                line-height: 28px;
+                &_ul{
+                    &:before {
+                        content: '✓';
+                        font-weight: bold;
+                        color: variable.$background;
+                        margin-right: 5px;
+                      }
+                }
+            }
+            &_btn{
+                margin-bottom: 10%;
+                text-align: center;
+                button{
+                    @include variable.white_btn(10px,35px,0.7em,white,variable.$background,variable.$background);
+                }
+            }
+        }
+    }
+}
+
+@include variable.for_phone_only{ 
+.plan{
+    width: 100%;
+    padding-top: 5%;
+    height: auto;
+
+    &_Details{
+        margin-bottom: 7%;
+        &_heading {
+            font-size: 3rem;
+        }
+
+        &_discription {
+            font-size: .9rem;
+        }
+    }
+    &_template{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+
+        &_card{
+            margin-bottom: 5%;
+            width: 50vw;
+            padding: 10px;
+
+        }
+    }
+}
+}

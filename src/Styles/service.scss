@@ -1,7 +1,7 @@
 @use './variable';
 
 .service_back {
-    width: 100vw;
+    width: 100%;
     height: 60vh;
     background-color: rgb(234, 234, 234);
     display: flex;
@@ -20,7 +20,7 @@
 
             &_title {
                 font-family: variable.$page_titlefont;
-                font-size: 420%;
+                font-size: 3.5rem;
             }
 
             &_discription {
@@ -87,7 +87,37 @@
         }
     }
 }
+@include variable.for_tab {
+    .service_back {
+        width: 100vw;
+        height: auto;
+        padding: 5% 0;
+        .service {
+            width: 80vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 5% 0 5%;
+            &_details {
+                margin: 0 0 3% 0;
+            }
+            &_template {
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
 
+                &_card {
+                    width: 200px;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 5%;
+                }
+            }
+        }
+    }
+}
 @include variable.for_phone_only {
     .service_back {
         width: 100vw;

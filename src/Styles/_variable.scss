@@ -20,13 +20,13 @@ $normal_textfont:'Poppins', sans-serif;
 };
 
 @mixin for_phone_only {
-    @media screen and (max-width:599px) {
+    @media screen and (max-width:750px) {
         @content
     }
 };
 
-@mixin for_tab_only {
-    @media screen and (max-width:800px) {
+@mixin for_tab {
+    @media screen and (max-width:899px) {
         @content
     }
 }

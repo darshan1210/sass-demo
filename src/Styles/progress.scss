@@ -1,7 +1,7 @@
 @use './variable';
 
 .Progress {
-    width: 100vw;
+    width: 100%;
     height: 40vh;
     background-image: url(https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHRlYW13b3JrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60);
     background-repeat: no-repeat;
@@ -46,15 +46,18 @@
     .Progress {
         width: 100vw;
         height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         &_Card {
-            width: 20vw;
-            height: 30vh;
+            margin: 5% 0;
+            width: 70vw;
+            height: auto;
             text-align: center;
 
             &_Number {
                 font-size: 2rem;
-                margin-bottom: 5%;
             }
         }
     }

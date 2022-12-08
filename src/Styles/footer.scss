@@ -1,0 +1,70 @@
+@use './variable';
+
+.footer{
+    height: 12vh;
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &_logo{
+        margin-left: 3%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_img{
+            img{
+                width:60px;
+                height: 60px;
+            }
+        }
+        &_text{
+            margin-left: 10%;
+            color:white;
+            font-size: 2rem;
+        }
+    }
+    &_icon{
+        display:flex;
+        flex-direction: row;
+        margin-left: 10%;
+        &_i{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 7px;
+            margin: 0 8px;
+            border: 1px solid white;
+            border-radius: 50%;
+            &:hover{
+                color: variable.$background;
+                background-color: white;
+            }
+        }
+    }
+    &_copyright{
+        margin-right: 2%;
+        color: white;
+    }
+}
+
+@include variable.for_phone_only{ 
+    .footer{
+        height:auto;
+        background-color: rgb(28, 28, 28);
+        display: flex;
+        flex-direction: column;
+
+        &_logo{
+            margin: 5% 0;
+        }
+        &_icon{
+            margin: 0 0 5% 3%;
+        }
+        &_copyright{
+            text-align: center;
+            margin: 0 0 5% 6%;
+        }
+    }
+}
