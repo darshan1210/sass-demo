@@ -2,11 +2,12 @@
 
 .managing_team {
     width: 100%;
-    height: 95vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 5% 0;
 
     &_heading {
         text-align: center;
@@ -33,7 +34,7 @@
 
         &_card {
             width: 15vw;
-            height: 60vh;
+            height: 60%;
 
             &_img {
                 width: 100%;
@@ -62,6 +63,16 @@
                 span {
                     margin: 0 5% 0 0;
                 }
+            }
+        }
+    }
+}
+
+@include variable.for_tab {
+    .managing_team {
+        &_template {
+            &_card {
+                height:40%
             }
         }
     }

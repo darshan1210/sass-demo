@@ -2,8 +2,8 @@
 
 .plan{
     width: 100%;
-    height: 100vh;
-    // background-color: rgb(234, 234, 234);
+    height: auto;
+    margin: 5% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,7 +107,19 @@
         }
     }
 }
-
+@include variable.for_tab {
+    .plan{
+        &_template{
+            &_card{
+                &_btn{
+                    button{
+                        @include variable.white_btn(10px,23px,0.7em,white,variable.$background,variable.$background);
+                    }
+                }
+            }
+        }
+    }
+}
 @include variable.for_phone_only{ 
 .plan{
     width: 100%;
