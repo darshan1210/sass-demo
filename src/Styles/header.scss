@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 10vh;
-    width:100%;
+    width: 100%;
     font-family: variable.$normal_textfont;
 
     &_logo_background {
@@ -89,7 +89,8 @@
             width: 100%;
             position: absolute;
             right: 0;
-            &_close{
+
+            &_close {
                 position: absolute;
                 right: 0;
                 font-size: 2rem;
@@ -99,8 +100,8 @@
 
             img {
                 margin: 10px 0 5px 20px;
-                height: 70px;
-                width: 70px;
+                width: 55px;
+                height: 45px;
             }
 
             &_link {
@@ -114,6 +115,7 @@
                     font-family: variable.$page_titlefont;
                     margin-bottom: 10px;
                     border: 2px solid white;
+
                     &:hover {
                         border-top: 2px solid white;
                         border-right: 2px solid white;
